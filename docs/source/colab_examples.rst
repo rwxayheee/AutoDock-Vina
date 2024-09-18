@@ -13,13 +13,19 @@ Overview
 ------------------------
 
 *Major Python packages used*
+
 [**RDKit**] `https://rdkit.org/ <https://rdkit.org/>`_
+
 [**Scrubber**] `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_
+
 [**Meeko**] `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_
+
 [**cctbx-base** (for reduce2)] `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_
+
 [**py3Dmol**] `https://github.com/avirshup/py3dmol <https://github.com/avirshup/py3dmol>`_
 
 *Data*
+
 [**Phenix-project/geostd** (for reduce2)] `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_
 
 !!! WIP !!!

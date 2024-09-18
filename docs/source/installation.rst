@@ -16,9 +16,8 @@ Vina is expected to work on x86 and compatible 64-bit Linux systems. The executa
 
 .. code-block:: bash
 
-    ./vina_1.2.0_linux_x86_64 --help
+    ./vina_1.2.5_linux_x86_64 --help
 
-If the executable is in your PATH, you can just type "vina --help" instead.
 
 macOS
 ------
@@ -29,9 +28,13 @@ Vina is expected to work on macOS 10.15 (Catalina) and newer. The executable for
 
 .. code-block:: bash
 
-    ./vina_1.2.0_macos_x86_64 --help
+    ./vina_1.2.5_mac_x86_64 --help
 
-If the executable is in your PATH, you can just type "vina --help" instead.
+
+aarch64
+------
+
+
 
 Python bindings
 ---------------
