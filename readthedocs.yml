@@ -17,7 +17,7 @@ formats: all
 build:
   os: ubuntu-22.04
   tools:
-    python: "miniconda-latest"
+    python: "miniconda3-4.7"
 
 conda:
   environment: build/python/environment.yml
