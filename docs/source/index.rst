@@ -15,7 +15,7 @@ Participating
 -------------
 Please report bugs or enhancement requests through the `Issue Tracker <https://github.com/ccsb-scripps/AutoDock-Vina/issues>`_.
 
-AutoDock Vina is **open source** and welcomes your contributions. `Fork the repository on GitHub <https://github.com/ccsb-scripps/AutoDock-Vina>`_ and submit a pull request. Participate on the `developer mailing list <http://mgldev.scripps.edu/mailman/listinfo/autodock>`_.
+AutoDock Vina is **open source** and welcomes your contributions. `Fork the repository on GitHub <https://github.com/ccsb-scripps/AutoDock-Vina>`_ and submit a pull request. 
 
 .. toctree::
    :maxdepth: 2
