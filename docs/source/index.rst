@@ -24,6 +24,7 @@ AutoDock Vina is **open source** and welcomes your contributions. `Fork the repo
 
    introduction
    installation
+   colab_examples
    faq
    citations
    changes
