@@ -9,7 +9,7 @@ Availability
 ------------
 AutoDock Vina can be easily installed with all its dependencies using `pip` or `conda` package managers.
 
-All **source code** is available under the `Apache License, version 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_ from `github.com/ccsb-scripps/AutoDock-Vina <https://github.com/ccsb-scripps/AutoDock-Vina>`_ and the Python Package index `pypi.org/project/Vina <pypi.org/project/Vina>`_.
+All **source code** is available under the `Apache License, version 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_ from `github.com/ccsb-scripps/AutoDock-Vina <https://github.com/ccsb-scripps/AutoDock-Vina>`_ and the Python Package index `pypi.org/project/Vina <https://pypi.org/project/Vina>`_.
 
 Participating
 -------------
