@@ -16,6 +16,7 @@ formats: all
 
 build:
   image: latest
+  os: "ubuntu-22.04"
 
 conda:
   environment: build/python/environment.yml
