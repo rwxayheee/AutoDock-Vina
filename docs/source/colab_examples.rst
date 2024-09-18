@@ -12,21 +12,18 @@ The following Colab examples are created to provide **an install-free experience
 Overview
 ------------------------
 
-*Major Python packages used*
+::
+*Major Python packages used* 
+[**RDKit**] `https://rdkit.org/ <https://rdkit.org/>`_ 
+[**Scrubber**] `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_ 
+[**Meeko**] `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_ 
+[**cctbx-base** (for reduce2)] `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_ 
+[**py3Dmol**] `https://github.com/avirshup/py3dmol <https://github.com/avirshup/py3dmol>`_ 
 
-[**RDKit**] `https://rdkit.org/ <https://rdkit.org/>`_
+*Data* 
+[**Phenix-project/geostd** (for reduce2)] `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
+::
 
-[**Scrubber**] `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_
-
-[**Meeko**] `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_
-
-[**cctbx-base** (for reduce2)] `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_
-
-[**py3Dmol**] `https://github.com/avirshup/py3dmol <https://github.com/avirshup/py3dmol>`_
-
-*Data*
-
-[**Phenix-project/geostd** (for reduce2)] `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_
 
 !!! WIP !!!
 
