@@ -10,3 +10,4 @@ dependencies:
   - swig
   - sphinx
   - sphinx_rtd_theme 
+  - sphinxcontrib-mermaid

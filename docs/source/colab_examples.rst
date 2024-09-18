@@ -12,32 +12,29 @@ The following Colab examples are created to provide **an install-free experience
 Overview
 ------------------------
 
-::
 *Major Python packages used* 
 [**RDKit**] `https://rdkit.org/ <https://rdkit.org/>`_ 
 [**Scrubber**] `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_ 
 [**Meeko**] `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_ 
 [**cctbx-base** (for reduce2)] `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_ 
-[**py3Dmol**] `https://github.com/avirshup/py3dmol <https://github.com/avirshup/py3dmol>`_ 
+[**py3Dmol**] `https://3dmol.org/ <https://3dmol.org/>`_ 
 
 *Data* 
 [**Phenix-project/geostd** (for reduce2)] `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
-::
-
 
 !!! WIP !!!
 
 Basic docking
 ------------------------
 
-`091624_Vina_basic_docking.ipynb <https://colab.research.google.com/drive/1cHSl78lBPUc_J1IZxLgN4GwD_ADmohVU?usp=sharing>`_
+`Try Basic Docking on Colab <https://colab.research.google.com/drive/1cHSl78lBPUc_J1IZxLgN4GwD_ADmohVU?usp=sharing>`_
 
 The **basic docking example** is a rewrite based on the original basic docking example. 
 
 Flexible docking
 ------
 
-`091624_Vina_flexible_docking.ipynb <https://colab.research.google.com/drive/1cazEckGbvl9huWzpxXpd_Qaj0_NipWcz?usp=sharing>`_
+`Try Flexible Docking on Colab <https://colab.research.google.com/drive/1cazEckGbvl9huWzpxXpd_Qaj0_NipWcz?usp=sharing>`_
 
 The **flexible docking example** is a rewrite based on the original flexible docking example. 
 
@@ -45,6 +42,6 @@ The **flexible docking example** is a rewrite based on the original flexible doc
 Using AD4SF in Vina
 ---------------
 
-`091624_Vina_docking_with_AD4SF.ipynb <https://colab.research.google.com/drive/1zoSyID2fSoqGz3Zb1_IatUT2uxZ2mCNZ?usp=sharing>`_
+`Try Docking Using AD4SF on Colab <https://colab.research.google.com/drive/1zoSyID2fSoqGz3Zb1_IatUT2uxZ2mCNZ?usp=sharing>`_
 
 The **using AutoDock4 (AD4) scoring function (SF) example** is a rewrite based on the corresponding part of the original basic docking example. 
