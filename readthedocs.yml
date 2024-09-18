@@ -15,16 +15,15 @@ sphinx:
 formats: all
 
 build:
-  os: "ubuntu-22.04"
+  os: ubuntu-22.04
   tools:
-    python: "miniconda-latest"
+    python: "3.10"
 
 conda:
   environment: build/python/environment.yml
 
 # Optionally set the version of Python and requirements required to build your docs
 python:
-   version: 3.10
    install:
    - method: setuptools
      path: build/python
