@@ -24,7 +24,7 @@ Overview
 *Data* 
 **Phenix-project/geostd** (for reduce2) `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
 
-.. image:: build/docs/source/images/docking_workflow.png
+.. image:: images/docking_workflow.png
    :alt: docking workflow
    :width: 300px
    :align: center
