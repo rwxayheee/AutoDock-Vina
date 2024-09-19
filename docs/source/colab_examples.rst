@@ -12,6 +12,13 @@ The following Colab examples are created to provide **an install-free experience
 Overview
 ------------------------
 
+**General Workflow of Docking Calculations in Examples**
+
+.. image:: images/docking_workflow.png
+   :alt: docking workflow
+   :width: 900px
+   :align: center
+
 *Major Python packages used* 
 
 * **RDKit** `https://rdkit.org/ <https://rdkit.org/>`_ 
@@ -22,12 +29,8 @@ Overview
 * **py3Dmol** `https://3dmol.org/ <https://3dmol.org/>`_ 
 
 *Data* 
-* **Phenix-project/geostd** (for reduce2) `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
 
-.. image:: images/docking_workflow.png
-   :alt: docking workflow
-   :width: 300px
-   :align: center
+* **Phenix-project/geostd** (for reduce2) `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
 
 Basic docking
 ------------------------
