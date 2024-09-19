@@ -35,21 +35,21 @@ General Workflow of Docking Calculations in Examples
 Basic docking
 ------------------------
 
-`Run on Colab <https://colab.research.google.com/drive/1cHSl78lBPUc_J1IZxLgN4GwD_ADmohVU?usp=sharing>`_
-
 The **basic docking example** is a rewrite based on the original basic docking example. 
+
+`Run on Colab <https://colab.research.google.com/drive/1cHSl78lBPUc_J1IZxLgN4GwD_ADmohVU?usp=sharing>`_
 
 Flexible docking
 ------
 
-`Run on Colab <https://colab.research.google.com/drive/1cazEckGbvl9huWzpxXpd_Qaj0_NipWcz?usp=sharing>`_
-
 The **flexible docking example** is a rewrite based on the original flexible docking example. 
+
+`Run on Colab <https://colab.research.google.com/drive/1cazEckGbvl9huWzpxXpd_Qaj0_NipWcz?usp=sharing>`_
 
 
 Using AD4SF in Vina
 ---------------
 
-`Run on Colab <https://colab.research.google.com/drive/1zoSyID2fSoqGz3Zb1_IatUT2uxZ2mCNZ?usp=sharing>`_
-
 The **using AutoDock4 (AD4) scoring function (SF) example** is a rewrite based on the corresponding part of the original basic docking example. 
+
+`Run on Colab <https://colab.research.google.com/drive/1zoSyID2fSoqGz3Zb1_IatUT2uxZ2mCNZ?usp=sharing>`_
