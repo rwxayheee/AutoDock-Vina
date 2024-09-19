@@ -12,12 +12,12 @@ The following Colab examples are created to provide **an install-free experience
 Overview
 ------------------------
 
+**General Workflow of Docking Calculations in Examples**
+
 .. figure:: images/docking_workflow.png
    :alt: docking workflow
    :width: 100%
    :align: center
-
-General Workflow of Docking Calculations in Examples
 
 *Major Python packages used* 
 
