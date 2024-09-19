@@ -14,9 +14,9 @@ Overview
 
 **General Workflow of Docking Calculations in Examples**
 
-.. figure:: images/docking_workflow.png
+.. image:: images/docking_workflow.png
    :alt: docking workflow
-   :width: 100%
+   :width: 60%
    :align: center
 
 *Major Python packages used* 
