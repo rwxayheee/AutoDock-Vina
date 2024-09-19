@@ -13,17 +13,18 @@ Overview
 ------------------------
 
 *Major Python packages used* 
-| [**RDKit**] `https://rdkit.org/ <https://rdkit.org/>`_ 
-| [**Scrubber**] `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_ 
-| [**Meeko**] `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_ 
-| [**ProDy**] `http://www.bahargroup.org/prody/ <http://www.bahargroup.org/prody/>`_ 
-| [**cctbx-base** (for reduce2)] `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_ 
-| [**py3Dmol**] `https://3dmol.org/ <https://3dmol.org/>`_ 
+
+**RDKit** `https://rdkit.org/ <https://rdkit.org/>`_ 
+**Scrubber** `https://github.com/forlilab/scrubber <https://github.com/forlilab/scrubber>`_ 
+**Meeko** `https://github.com/forlilab/Meeko <https://github.com/forlilab/Meeko>`_ 
+**ProDy** `http://www.bahargroup.org/prody/ <http://www.bahargroup.org/prody/>`_ 
+**cctbx-base** (for reduce2) `https://github.com/cctbx/cctbx_project <https://github.com/cctbx/cctbx_project>`_ 
+**py3Dmol** `https://3dmol.org/ <https://3dmol.org/>`_ 
 
 *Data* 
-| [**Phenix-project/geostd** (for reduce2)] `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
+**Phenix-project/geostd** (for reduce2) `https://github.com/phenix-project/geostd/ <https://github.com/phenix-project/geostd/>`_ 
 
-.. image:: docs/source/images/docking_workflow.png
+.. image:: build/docs/source/images/docking_workflow.png
    :alt: docking workflow
    :width: 300px
    :align: center
