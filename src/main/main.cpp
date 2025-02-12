@@ -32,6 +32,7 @@
 #include "scoring_function.h"
 #include <unordered_map>
 #include <boost/filesystem.hpp>
+#include <sys/stat.h>
 
 struct usage_error : public std::runtime_error {
 	usage_error(const std::string& message) : std::runtime_error(message) {}
@@ -470,14 +471,24 @@ Thank you!\n";
 			}
 
 			// Iter all .pdbqt files in the batch input directory
-			if (batch_ligand_names.size() == 1 && is_directory(batch_ligand_names[0])) {
+			if (batch_ligand_names.size() == 1) {
 				std::string in_dir = batch_ligand_names[0];
-				batch_ligand_names.clear();
-				for (const auto& entry : boost::filesystem::directory_iterator(in_dir)) {
-					if (entry.path().extension() == ".pdbqt") {
-						batch_ligand_names.push_back(entry.path().string());
+			
+				struct stat info;
+				if (stat(in_dir.c_str(), &info) != 0) {  // Path does not exist
+					std::cerr << "Error: The specified path does not exist: " << in_dir << std::endl;
+					exit(EXIT_FAILURE);
+				}
+			
+				if (info.st_mode & S_IFDIR) {  // If it's a directory, iterate .pdbqt non-recursively
+					batch_ligand_names.clear();
+					for (const auto& entry : boost::filesystem::directory_iterator(in_dir)) {
+						if (entry.path().extension() == ".pdbqt") {
+							batch_ligand_names.push_back(entry.path().string());
+						}
 					}
 				}
+				// If it's a file, do nothing and proceed
 			}
 
 			std::set<std::string> repeated_names;
