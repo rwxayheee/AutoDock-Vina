@@ -743,10 +743,12 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 
 	out << "ENDMDL\n";
 
-	out.erase(std::remove(out.begin(), out.end(), '\0'), out.end());
-    out.erase(std::remove(out.begin(), out.end(), '\r'), out.end());
+    std::string result = out.str();
 
-	return out.str();
+    result.erase(std::remove(result.begin(), result.end(), '\0'), result.end());
+    result.erase(std::remove(result.begin(), result.end(), '\r'), result.end());
+
+    return result;
 }
 
 void model::set         (const conf& c) {
