@@ -614,7 +614,7 @@ void Vina::write_poses(const std::string& output_name, int how_many, double ener
 	}
 }
 
-void Vina::write_pose(const std::string& output_name, const std::string& remark) {
+void Vina::write_pose(const std::string& output_name, std::string remark) {
 	std::ostringstream format_remark;
 	format_remark.setf(std::ios::fixed, std::ios::floatfield);
 	format_remark.setf(std::ios::showpoint);
