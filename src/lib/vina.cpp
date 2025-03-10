@@ -619,6 +619,9 @@ void Vina::write_pose(const std::string& output_name, const std::string& remark)
 	format_remark.setf(std::ios::fixed, std::ios::floatfield);
 	format_remark.setf(std::ios::showpoint);
 
+	remark.erase(std::remove(remark.begin(), remark.end(), '\r'), remark.end());
+    remark.erase(std::remove(remark.begin(), remark.end(), '\0'), remark.end());
+
 	// Add REMARK keyword to be PDB valid
 	if(!remark.empty()){
 		format_remark << "REMARK " << remark << " \n";
