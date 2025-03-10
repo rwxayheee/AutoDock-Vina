@@ -279,9 +279,15 @@ void parse_pdbqt_root_aux(std::istream& in, parsing_struct& p, context& c) {
     std::string str;
 
     while(std::getline(in, str)) {
+        
+        if (!str.empty() && str.back() == '\r') {
+            str.pop_back(); // strip carriage return
+        }
+
         add_context(c, str);
 
         if(str.empty()) {} // ignore ""
+        if (str[0] == '\0') {} // ignore "NULL"
         else if(starts_with(str, "WARNING")) {} // ignore - AutoDockTools bug workaround
         else if(starts_with(str, "REMARK")) {} // ignore
         else if(starts_with(str, "ATOM  ") || starts_with(str, "HETATM"))
