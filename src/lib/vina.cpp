@@ -614,17 +614,19 @@ void Vina::write_poses(const std::string& output_name, int how_many, double ener
 	}
 }
 
-void Vina::write_pose(const std::string& output_name, std::string remark) {
+void Vina::write_pose(const std::string& output_name, const std::string& remark) {
+	std::string clean_remark = remark; 
+
+    clean_remark.erase(std::remove(clean_remark.begin(), clean_remark.end(), '\r'), clean_remark.end());
+    clean_remark.erase(std::remove(clean_remark.begin(), clean_remark.end(), '\0'), clean_remark.end());
+
 	std::ostringstream format_remark;
 	format_remark.setf(std::ios::fixed, std::ios::floatfield);
 	format_remark.setf(std::ios::showpoint);
 
-	remark.erase(std::remove(remark.begin(), remark.end(), '\r'), remark.end());
-    remark.erase(std::remove(remark.begin(), remark.end(), '\0'), remark.end());
-
 	// Add REMARK keyword to be PDB valid
-	if(!remark.empty()){
-		format_remark << "REMARK " << remark << " \n";
+	if(!clean_remark.empty()){
+		format_remark << "REMARK " << clean_remark << " \n";
 	}
 
 	ofile f(make_path(output_name));
