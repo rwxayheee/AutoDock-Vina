@@ -283,11 +283,11 @@ void parse_pdbqt_root_aux(std::istream& in, parsing_struct& p, context& c) {
         if (!str.empty() && str.back() == '\r') {
             str.pop_back(); // strip carriage return
         }
+        if (str[0] == '\0') {} // ignore "NULL"
 
         add_context(c, str);
 
         if(str.empty()) {} // ignore ""
-        if (str[0] == '\0') {} // ignore "NULL"
         else if(starts_with(str, "WARNING")) {} // ignore - AutoDockTools bug workaround
         else if(starts_with(str, "REMARK")) {} // ignore
         else if(starts_with(str, "ATOM  ") || starts_with(str, "HETATM"))
@@ -307,6 +307,11 @@ void parse_pdbqt_root(std::istream& in, parsing_struct& p, context& c) {
 
     while(std::getline(in, str)) {
         add_context(c, str);
+
+        if (!str.empty() && str.back() == '\r') {
+            str.pop_back(); // strip carriage return
+        }
+        if (str[0] == '\0') {} // ignore "NULL"
 
         if(str.empty()) {} // ignore
         else if(starts_with(str, "WARNING")) {} // ignore - AutoDockTools bug workaround
@@ -348,6 +353,10 @@ void parse_pdbqt_aux(std::istream& in, parsing_struct& p, context& c, boost::opt
 
     while(std::getline(in, str)) {
         add_context(c, str);
+
+        if (!str.empty() && str.back() == '\r') {
+            str.pop_back(); // strip carriage return
+        }
 
         if(str.empty()) {} // ignore ""
         if(str[0] == '\0') {} // ignore a different kind of emptiness (potential issues on Windows)
