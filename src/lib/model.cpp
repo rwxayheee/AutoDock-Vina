@@ -703,10 +703,6 @@ std::string coords_to_pdbqt_string(const vec& coords, const std::string& str) {
 	string_write_coord(31, coords[0], tmp);
 	string_write_coord(39, coords[1], tmp);
 	string_write_coord(47, coords[2], tmp);
-
-	tmp.erase(std::remove(tmp.begin(), tmp.end(), '\0'), tmp.end());
-    tmp.erase(std::remove(tmp.begin(), tmp.end(), '\r'), tmp.end());
-	
 	return tmp;
 }
 
@@ -746,6 +742,9 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 		write_context(flex_context, out);
 
 	out << "ENDMDL\n";
+
+	out.erase(std::remove(out.begin(), out.end(), '\0'), out.end());
+    out.erase(std::remove(out.begin(), out.end(), '\r'), out.end());
 
 	return out.str();
 }
