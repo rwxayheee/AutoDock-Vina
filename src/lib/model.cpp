@@ -145,6 +145,7 @@ public:
 			if (context_str.find('\0') != std::string::npos) {
 				std::cerr << "Warning: NULL detected in lig.cont[" << i << "]: "
 						  << " [" << context_str << "]" << std::endl;
+				std::replace(context_str.begin(), context_str.end(), '\0', '');
 			}
 		}
 	}
@@ -754,8 +755,8 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 
     std::string result = out.str();
 
-    result.erase(std::remove(result.begin(), result.end(), '\0'), result.end());
-    result.erase(std::remove(result.begin(), result.end(), '\r'), result.end());
+    // result.erase(std::remove(result.begin(), result.end(), '\0'), result.end());
+    // result.erase(std::remove(result.begin(), result.end(), '\r'), result.end());
 
     return result;
 }
