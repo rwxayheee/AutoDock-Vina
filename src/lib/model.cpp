@@ -145,7 +145,7 @@ public:
 			if (context_str.find('\0') != std::string::npos) {
 				std::cerr << "Warning: NULL detected in lig.cont[" << i << "]: "
 						  << " [" << context_str << "]" << std::endl;
-				std::replace(context_str.begin(), context_str.end(), '\0', '');
+				context_str.erase(std::remove(context_str.begin(), context_str.end(), '\0'), context_str.end());
 			}
 		}
 	}
