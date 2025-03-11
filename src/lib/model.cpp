@@ -738,8 +738,12 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 
 	VINA_FOR_IN(i, ligands)
 		write_context(ligands[i].cont, out);
-	if (num_flex() > 0) // otherwise remark is written in vain
+	if (num_flex() > 0) {// otherwise remark is written in vain
+		if (flex_context.empty()) {
+			std::cerr << "Warning: flex_context is empty!" << std::endl;
+		}
 		write_context(flex_context, out);
+	}
 
 	out << "ENDMDL\n";
 
