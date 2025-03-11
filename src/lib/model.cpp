@@ -136,8 +136,15 @@ public:
 		transform_ranges(lig, *this);
 		VINA_FOR_IN(i, lig.pairs)
 			this->update(lig.pairs[i]);
-		VINA_FOR_IN(i, lig.cont)
-			this->update(lig.cont[i]); // parsed_line update, below
+		VINA_FOR_IN(i, lig.cont) {
+			std::cout << "Before update: " << lig.cont[i].first << " " 
+					<< (lig.cont[i].second ? std::to_string(*lig.cont[i].second) : "nullopt") << std::endl;
+
+			this->update(lig.cont[i]);
+
+			std::cout << "After update: " << lig.cont[i].first << " " 
+					<< (lig.cont[i].second ? std::to_string(*lig.cont[i].second) : "nullopt") << std::endl;
+		}
 	}
 	void update(residue& r) const {
 		transform_ranges(r, *this);
@@ -738,12 +745,8 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 
 	VINA_FOR_IN(i, ligands)
 		write_context(ligands[i].cont, out);
-	if (num_flex() > 0) {// otherwise remark is written in vain
-		if (flex_context.empty()) {
-			std::cerr << "Warning: flex_context is empty!" << std::endl;
-		}
+	if (num_flex() > 0) // otherwise remark is written in vain
 		write_context(flex_context, out);
-	}
 
 	out << "ENDMDL\n";
 
