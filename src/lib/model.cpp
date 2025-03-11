@@ -136,16 +136,8 @@ public:
 		transform_ranges(lig, *this);
 		VINA_FOR_IN(i, lig.pairs)
 			this->update(lig.pairs[i]);
-		VINA_FOR_IN(i, lig.cont) {
-			std::cout << "Before update: " << lig.cont[i].first << " " 
-					<< (lig.cont[i].second ? std::to_string(*lig.cont[i].second) : "nullopt") << std::endl;
-
+		VINA_FOR_IN(i, lig.cont)
 			this->update(lig.cont[i]);
-
-			std::cout << "After update: " << lig.cont[i].first << " " 
-					<< (lig.cont[i].second ? std::to_string(*lig.cont[i].second) : "nullopt") << std::endl;
-		}
-	}
 	void update(residue& r) const {
 		transform_ranges(r, *this);
 	}
@@ -743,10 +735,26 @@ std::string model::write_model(sz model_number, const std::string &remark) {
 	out << "MODEL " << model_number << '\n';
 	out << remark;
 
-	VINA_FOR_IN(i, ligands)
-		write_context(ligands[i].cont, out);
-	if (num_flex() > 0) // otherwise remark is written in vain
-		write_context(flex_context, out);
+	VINA_FOR_IN(i, ligands) {
+		bool has_null = false;
+		VINA_FOR_IN(j, ligands[i].cont) {
+            const std::string& str = ligands[i].cont[j].first;
+            if (str.find('\0') != std::string::npos) {
+                has_null = true;
+                std::cerr << "Warning: NULL detected in ligands[" << i << "].cont[" << j << "]: "
+                          << " [" << str << "]" << std::endl;
+            }
+        }
+		if (!has_null) {
+            write_context(ligands[i].cont, out);
+        } else {
+            std::cerr << "Skipping write_context() for ligands[" << i << "].cont due to NULL values!" << std::endl;
+        }
+    }
+
+		if (num_flex() > 0) // otherwise remark is written in vain
+			write_context(flex_context, out);
+	}
 
 	out << "ENDMDL\n";
 
