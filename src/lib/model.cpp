@@ -141,7 +141,7 @@ public:
 		VINA_FOR_IN(i, lig.cont) {
 			this->update(lig.cont[i]); // parsed_line update, below
 	
-			const std::string& context_str = lig.cont[i].first;  // This must be inside the loop
+			std::string& context_str = lig.cont[i].first;  // This must be inside the loop
 			if (context_str.find('\0') != std::string::npos) {
 				std::cerr << "Warning: NULL detected in lig.cont[" << i << "]: "
 						  << " [" << context_str << "]" << std::endl;
